@@ -3,10 +3,10 @@ import 'package:wanandroid_flutter_swc/common/base/base_repo.dart';
 
 import 'net.dart';
 
-class CallUnCreatedRepo extends BaseRepo{
+class RecommendRepo extends BaseRepo{
   final IRecommendNet _net;
 
-  CallUnCreatedRepo(this._net);
+  RecommendRepo(this._net);
 
   @override
   Future getList(int pageNo, {Map<String,dynamic>? dynamics}) async{

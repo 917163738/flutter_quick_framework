@@ -7,4 +7,5 @@ class AppRoutes {
   static const mine = '/mine';
   static const category = '/category';
   static const collect = '/collect';
+  static const web = '/web';
 }

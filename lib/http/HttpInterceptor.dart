@@ -68,8 +68,8 @@ class HttpInterceptor extends Interceptor {
           return;
           // throw httpException;
         } else {
-          if (data.containsKey('value')) {
-            response.data = data['value'];
+          if (data.containsKey('data')) {
+            response.data = data['data'];
           }
         }
       }

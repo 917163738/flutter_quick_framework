@@ -31,7 +31,7 @@ AppBar customAppBar(String title, {bool showBack = true,List<Widget>? actions}) 
               onTap: () => {Get.back()},
               child: Container(
                   padding: EdgeInsets.all(15.w),
-                  child: Image.asset('assets/images/ic_back_white.png')),
+                  child: const Icon(Icons.arrow_back_ios,color: Colors.black,)),
             )
           : null,
       toolbarHeight: 48.h,

@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:wanandroid_flutter_swc/common/middlewares/middlewares.dart';
 import 'package:wanandroid_flutter_swc/pages/main/binding.dart';
 import 'package:wanandroid_flutter_swc/pages/main/view.dart';
+import 'package:wanandroid_flutter_swc/pages/webview/binding.dart';
+import 'package:wanandroid_flutter_swc/pages/webview/view.dart';
 import 'package:wanandroid_flutter_swc/pages/welcome/index.dart';
 
 import 'routes.dart';
@@ -26,6 +28,11 @@ class AppPages {
       name: AppRoutes.main,
       page: () =>  MainPage(),
       binding: MainBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.web,
+      page: () =>  WebViewPage(),
+      binding: WebViewBinding(),
     ),
   ];
 
