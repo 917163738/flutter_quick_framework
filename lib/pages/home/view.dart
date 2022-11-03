@@ -31,7 +31,7 @@ class HomePage extends GetView<HomeLogic> {
               isScrollable: true,
             ),
           ),
-          body: TabBarView(
+          body: const TabBarView(
             children: [RecommendPage(), CenterPage(), QaPage()],
           ),
         ));

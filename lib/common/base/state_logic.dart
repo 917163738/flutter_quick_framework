@@ -41,7 +41,7 @@ abstract class StateLogic<T extends BaseRepo> extends GetxController
   final RefreshController refresherController = RefreshController();
   final String? tag = null;
   bool _needLoadDataWhenReady = true;
-  var _pageNo = 1;
+  var _pageNo = 0;
 
   T get repo => GetInstance().find<T>(tag: tag);
 
@@ -156,7 +156,7 @@ abstract class StateLogic<T extends BaseRepo> extends GetxController
   Future<List<dynamic>?> _getList(
       bool isRefresh, List<dynamic>? list, Map<String,dynamic>? params) async {
     if (isRefresh) {
-      _pageNo = 1;
+      _pageNo = 0;
       refresherController.resetNoData();
     }
     final result = await repo.getList(_pageNo, dynamics: params);
