@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:wanandroid_flutter_swc/pages/home/center/widgets/item_view.dart';
 
+import '../../../common/widgets/list.dart';
 import 'logic.dart';
 
 class CenterPage extends StatefulWidget {
@@ -15,6 +17,13 @@ class _CenterPageState extends State<CenterPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return listWithRefresherObx(
+        logic,
+        Obx(() {
+          return ListView.builder(
+            itemBuilder: (context, index) => itemView(logic.state.list[index]),
+            itemCount: logic.state.list.length,
+          );
+        }));
   }
 }

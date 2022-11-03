@@ -5,7 +5,7 @@ Widget itemCardView({required Widget child}) {
   return Card(
       elevation: 0,
       color: Colors.white,
-      margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+      margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
       // 外边距
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(6),
