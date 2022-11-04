@@ -19,11 +19,15 @@ class _CenterPageState extends State<CenterPage> {
   Widget build(BuildContext context) {
     return listWithRefresherObx(
         logic,
-        Obx(() {
-          return ListView.builder(
-            itemBuilder: (context, index) => itemView(logic.state.list[index]),
-            itemCount: logic.state.list.length,
-          );
-        }));
+        CustomScrollView(
+          slivers: [
+            Obx(() {
+              return SliverList(
+                  delegate: SliverChildBuilderDelegate((content, index) {
+                    return itemView(logic.state.list[index]);
+                  }, childCount: logic.state.list.length));
+            })
+          ],
+        ));
   }
 }

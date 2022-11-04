@@ -8,7 +8,7 @@ class CenterBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut(() => CenterLogic());
-    Get.lazyPut<INet>(() => Net());
-    Get.lazyPut(() => Repo(Get.find()));
+    Get.lazyPut<INet>(() => Net(),tag: 'CenterNet');
+    Get.lazyPut(() => Repo(Get.find(tag: 'CenterNet')),tag: 'CenterRepo');
   }
 }

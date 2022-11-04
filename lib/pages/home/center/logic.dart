@@ -4,6 +4,8 @@ import 'service/repo.dart';
 import 'state.dart';
 
 class CenterLogic extends StateLogic<Repo> {
+  @override
+  String? get tag => 'CenterRepo';
   final CenterState state = CenterState();
 
   @override
